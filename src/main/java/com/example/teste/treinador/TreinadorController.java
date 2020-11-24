@@ -45,7 +45,7 @@ public class TreinadorController {
     }
 
     @ApiOperation("Troca aleatoriamente o pokemon do treinador por outro")
-    @PatchMapping(value = "/trocar-pokemon/{idTreinador}")
+    @PutMapping(value = "/trocar-pokemon/{idTreinador}")
     public Treinador trocarPokemon(@PathVariable Long idTreinador) {
         return treinadorService.trocarPokemon(idTreinador);
     }

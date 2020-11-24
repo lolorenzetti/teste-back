@@ -42,8 +42,8 @@ public class TreinadorService {
     public Treinador trocarPokemon(Long id) {
         Treinador treinadorOld = findById(id);
         Pokemon pokemonNew = buscarPokemonService.buscarPokemon(geraAleatorio());
-        Treinador treinadorNew = new Treinador(treinadorOld.getNome(), treinadorOld.getIdade(), treinadorOld.getCidade(), pokemonNew);
-        return  treinadorRepository.save(treinadorNew);
+        treinadorOld.setPokemon(pokemonNew);
+        return  treinadorRepository.save(treinadorOld);
     }
 
     public void delete(Long id) {
