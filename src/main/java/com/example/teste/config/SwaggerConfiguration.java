@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfiguration {
 
-    private final String RESOURCE_PACKAGE = "com.example.teste.resource";
+    private final String RESOURCE_PACKAGE = "com.example.teste.treinador";
 
     @Bean
     public Docket api() {
